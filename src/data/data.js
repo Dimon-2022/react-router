@@ -65,7 +65,7 @@ export const products = [
     id: 13,
     categoryId: "furniture",
     name: "Desk Chair",
-    price: 200,
+    price: 50,
     img: "/deskСhair.png",
     description: "Какой замечательный стул."
   },
