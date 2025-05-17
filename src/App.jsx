@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
@@ -8,6 +8,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Layout from "./components/Layout";
+import Thanks from "./pages/Thanks";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,9 @@ const router = createBrowserRouter([
       { path: "cart", element: <Cart /> },
       { path: "category/:id", element: <Category /> },
       { path: "product/:id", element: <ProductDetails /> },
-      { path: "*", element: <NotFound /> },
+      { path: "thanks", element: <Thanks/>},
+      // { path: "*", element: <NotFound /> },
+      { path: "*", element: <Navigate to="/"/> },
     ],
   },
 ]);
